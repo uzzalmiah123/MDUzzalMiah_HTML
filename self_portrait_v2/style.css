@@ -1,0 +1,83 @@
+/* our comment goes in here */
+
+/* generic selector */
+
+body {
+	background-color: SeaShell ;
+	color: blue;
+	font-family: Times New Roman;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a{
+	color: blue;
+}
+p {
+	color:black;
+}
+
+
+/* psuedo selector - user interacts */
+
+a:hover {
+	color: orange;
+}
+img {
+	width: 100%;
+}
+/* id and class selector */
+#container, main {
+	min-width: 320px;
+	width:960px;
+	margin: 0 auto;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+#header ul{
+	display:flex;
+}
+#header li {
+	margin-left: 1em;
+}
+#header a {
+	font-size: 1.1em
+}
+
+#portfolio {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
+}
+
+.project {
+	border: 1px solid green;
+	padding: 1em;
+	background-color:transparent;
+	transition: background-color 300ms ease-in;
+	text-align: center;
+}
+
+.project:hover {
+	background-color: BlanchedAlmond;
+} 
+
+/*about */
+
+#portrait {
+	width: 200px;
+	float: left;
+}
+
+#about p {
+	font-size: 2em;
+}
+

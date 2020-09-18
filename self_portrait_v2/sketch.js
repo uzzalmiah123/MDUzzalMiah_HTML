@@ -1,5 +1,5 @@
 /* 
-Self Portrait v2 
+Self Portrait v1 
 By MD Uzzal Miah
 */
 
