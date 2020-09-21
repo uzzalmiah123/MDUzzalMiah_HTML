@@ -2,40 +2,51 @@
 Self Portrait v1 
 By MD Uzzal Miah
 */
+// Global scope
+
+var x = 460; // character origin
+var y = 150;
+
+var eyeSize = 100;
+var mouthSize = eyeSize;
+
+var faceRed = 210
+var faceGreen = 180
+var faceBlue = 140
 
 function setup() {
 	createCanvas(650, 360);
 }
 
 function draw() {
-	background("#34495E");
+	background("#08670A");
 
 	// ear 
 	fill(218,159,83); // Left ear
-	arc(350, 130, 60, 60, 4, PI + QUARTER_PI);
+	arc(x - 110, y - 20, 60, 60, 4, PI + QUARTER_PI);
      
      //Right Ear
 	fill(218,159,83);
-	arc(557, 130, 60, 60, 4, PI + QUARTER_PI);
+	arc(x + 97, y - 20, 60, 60, 4, PI + QUARTER_PI);
 
 	//face
 	noStroke();
-	fill(210,180,140); // Th
-	triangle(300, 55, 600, 60, 460, 350)
+	fill(faceRed,faceGreen,faceBlue); // Th
+	triangle(x - 160,y - 95, x + 140, y- 90, x, y + 200)
 
 	// eyes
 
-	// Right 
+	// left eye
 	fill(220, 220, 220); // Gainsboro
-	circle(400, 130, 100);
+	circle(x - 60, y - 20, eyeSize);
 	fill(0); // Black
-	circle(400, 130, 50);
+	circle(x - 60, y - 20, eyeSize / 2);
 
-    //Left
+    //Right eay
     fill(220, 220, 220); // Gainsboro
-	ellipse(520, 130, 100, 50);
+	ellipse(x + 60, y - 20, eyeSize, eyeSize / 2);
     fill(0); // Black
-	ellipse(520, 130, 60, 30);
+	ellipse(x+ 60, y - 20, eyeSize / 1.7, eyeSize / 3.3);
 
 
 	
@@ -45,7 +56,7 @@ function draw() {
     stroke("#D68910");
     strokeWeight(10)
     noFill();
-	rect(410, 230, 100, 30, 10);
+	rect(x - 50, y + 80, mouthSize, mouthSize / 3.3, mouthSize / 10);
     
 
 
@@ -53,37 +64,36 @@ function draw() {
 	// hair
 	stroke("Black");
 	strokeWeight(3);
-    line( 390, 50, 410, 70);
-	line( 400, 50, 420, 70);
-	line( 410, 50, 430, 70);
-	line( 420, 50, 440, 70);
-	line( 430, 50, 450, 70);
-	line( 440, 50, 460, 70);
-	line( 450, 50, 470, 70);
-	line( 460, 50, 480, 70);
-	line( 470, 50, 490, 70);
-	line( 480, 50, 500, 70);
-	line( 490, 50, 510, 70);
-	line( 500, 50, 520, 70);
-	line( 510, 50, 530, 70);
+    line( x - 70, y - 100, x - 50, y - 80);
+	line( x - 60, y - 100, x - 40, y - 80);
+	line( x - 50, y - 100, x - 30, y - 80);
+	line( x - 40, y - 100, x - 20, y - 80);
+	line( x - 30, y - 100, x - 10, y - 80);
+	line( x - 20, y - 100, x, y - 80);
+	line( x - 10, y - 100, x + 10, y - 80);
+	line( x, y - 100, x + 20, y - 80);
+	line( x + 10, y - 100, x + 30, y - 80);
+	line( x + 20, y - 100, x + 40, y - 80);
+	line( x + 30, y - 100, x + 50, y - 80);
+	line( x + 40, y - 100, x + 60, y - 80);
+	line( x + 50, y - 100, x + 70, y - 80);
+
 
 
 
 	//Beard
 
-	line( 420, 220, 410, 230);
-	line( 430, 220, 420, 230);
-	line( 440, 220, 430, 230);
-	line( 450, 220, 440, 230);
-	line( 460, 220, 450, 230);
-	line( 470, 220, 460, 230);
-	line( 480, 220, 470, 230);
-	line( 490, 220, 480, 230);
-	line( 500, 220, 490, 230);
-	line( 510, 220, 500, 230);
-	line( 520, 220, 510, 230);
-
-
+	line( x - 40, y + 70, x - 50, y + 80);
+	line( x - 30, y + 70, x - 40, y + 80);
+	line( x - 20, y + 70, x - 30, y + 80);
+	line( x - 10, y + 70, x - 20, y + 80);
+	line( x, y + 70,x - 10, y + 80);
+	line( x + 10, y + 70, x, y + 80);
+	line( x + 20, y + 70, x + 10, y + 80);
+	line( x + 30, y + 70, x + 20, y + 80);
+	line( x + 40, y + 70, x + 30, y + 80);
+	line( x + 50, y + 70, x + 40, y + 80);
+	line( x + 60, y + 70, x + 50, y + 80);
 
 
 }
