@@ -1,8 +1,7 @@
-/* 
-Logo V 1
-By MD Uzzal Miah
-text and images
-*/
+
+
+
+
 
 var x = 0;
 var y = 100;
