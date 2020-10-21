@@ -19,7 +19,7 @@ var currentImage;
 
 function preload(){
 	logo_1Image = loadImage('logo_1.png');
-	logo_2Image = loadImage('logo_2.png');
+	logo_2Image = loadImage('Logo_2.png');
 	logo_3Image = loadImage('logo_3.png');
 }
 
