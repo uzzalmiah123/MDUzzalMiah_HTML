@@ -24,7 +24,7 @@ function draw() {
   var duration = pianoSound.duration();
   var timeElapsed = map(currentTime, 0, duration, 0, width);
 
-  fill('yellow');
+  fill('green');
   noStroke();
   rect(0, height - 100, timeElapsed, 100);
 

@@ -62,6 +62,12 @@ function setup() {
 
 function draw(){
 	background('#7FFFD4');
+  fill('yellow');
+  noStroke();
+  rect(0, height - 100, timeElapsed, 100);
+
+
+
 
 textFont('Patua One');
 fill('#35C796')
@@ -96,6 +102,14 @@ if (pianoSound.isPlaying()){
 	 if (drumSound.isPlaying()){
 		    image(drumImage,0, 0,width, height);
 	 }
+
+	 var currentTime = pianoSound.currentTime();
+  var duration = pianoSound.duration();
+  var timeElapsed = map(currentTime, 0, duration, 0, width);
+
+  fill('green');
+  noStroke();
+  rect(0, height - 100, timeElapsed, 100);
 
 }
 
