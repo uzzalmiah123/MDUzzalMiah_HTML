@@ -46,6 +46,7 @@ function preload() {
 
 function setup() {
 	createCanvas(640, 360);
+	textSize(150);
 	pianoSound.playMode('restart');
 	rainSound.playMode('restart');
 	windySound.playMode('restart');	
@@ -61,6 +62,10 @@ function setup() {
 
 function draw(){
 	background('#7FFFD4');
+
+textFont('Patua One');
+fill('#35C796')
+ text("Sound",110, 220,);
 if (pianoSound.isPlaying()){
     image(pianoImage,0, 0,width, height);
 }
@@ -135,4 +140,3 @@ function togglePlaying(){
 	rainSound.pause();
 	pianoSound.pause();
 }
-
