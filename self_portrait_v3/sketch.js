@@ -9,6 +9,8 @@ var y = 150;
 
 var eyeSize = 100;
 var mouthSize = eyeSize;
+var lookUP = 100;
+var ear;
 
 var faceRed = 0;
 var faceGreen = 180;
@@ -21,17 +23,26 @@ function setup() {
 
 function draw() {
 	background("#CD5C5C");
-	
-	faceRed = map(mouseX, 0, height, 0, 255);
 
- 
+	//eye movement 
+
+ 	lookUP = map(mouseX, 0, height, 0,300 );
+lookUP = constrain(lookUP, 240, 280);
+
+
+
+
+// ear movement.
+ear = map(mouseX , 0, height, width,200 );
+ear = constrain(ear, 246, 280);
+
 	// ear 
 	fill(218,159,83); // Left ear
-	arc(x - 110, y - 20, 60, 60, 4, PI + QUARTER_PI);
+	arc(ear - 35, y - 20, 60, 60, 4, PI + QUARTER_PI);
      
      //Right Ear
 	fill(218,159,83);
-	arc(x + 97, y - 20, 60, 60, 4, PI + QUARTER_PI);
+	arc(ear + 157, y - 20, 60, 60, 4, PI + QUARTER_PI);
 
 	//face
 	noStroke();
@@ -44,13 +55,14 @@ function draw() {
 	fill(220, 220, 220); // Gainsboro
 	circle(x - 60, y - 20, eyeSize);
 	fill(0); // Black
-	circle(x - 60, y - 20, eyeSize / 2);
+	circle(lookUP, y - 20, eyeSize / 2);
+
 
     //Right eay
     fill(220, 220, 220); // Gainsboro
-	ellipse(x + 60, y - 20, eyeSize, eyeSize / 2);
+	ellipse(x + 50, y - 20, eyeSize);
     fill(0); // Black
-	ellipse(x+ 60, y - 20, eyeSize / 1.7, eyeSize / 3.3);
+	ellipse(lookUP + 110, y - 20, eyeSize / 2);
 
 
 	
