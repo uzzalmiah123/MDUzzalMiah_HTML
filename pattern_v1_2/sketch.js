@@ -32,9 +32,9 @@ for (let x = random(-200); x < width; x += random(100, 200)) {
 	}
 
 
-// big bulding 
+// Tall bulding 
 	for (let x = random(-200); x < width; x += random(50, 100)) {
-		filter(BLUR, 1);
+		filter(BLUR, 2);
 		let r = random(40);
 		let g = random(40);
 		let b = random(40);
@@ -89,6 +89,8 @@ for (let x = 0; x < width; x += random(50, 200)) {
 		let treeHeight = random(treeWidth, treeWidth * 2);
 		ellipse(x, height - y - h/2, treeWidth, treeHeight);
 	}
+
+	//Rain
 	for (let x = 0; x < width; x += random(2, 10)) {
 		fill('#aec6cf');
 		let y = random(10, 400);
