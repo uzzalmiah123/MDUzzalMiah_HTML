@@ -15,24 +15,30 @@ function mousePressed() {
 }
 
 function pattern() {
-	background('#87ceeb');
+	background(' #9099a1');
 
 
 
-//sun 
-noStroke();
-fill('#FFFF33');
-ellipse(250, 50, 60, 60);
+for (let x = random(-200); x < width; x += random(100, 200)) {
+		// brown color
+		let r = random(50, 10);
+		let g = random(100, 10);
+		let b = random(30,10);
+		fill(r, g, b, 60); 
+		noStroke();
+		let y = random(50, 200);
+		let w = random(200, 300);
+		triangle(x, height, x + w/2, y, x + w, height);
+	}
 
 
-
-	// big bulding 
+// big bulding 
 	for (let x = random(-200); x < width; x += random(50, 100)) {
-		//colors
-		let r = random(100);
-		let g = random(50);
-		let b = random(100);
-		fill(r, g, b); 
+		filter(BLUR, 1);
+		let r = random(40);
+		let g = random(40);
+		let b = random(40);
+		fill(r, g, b,); 
 		noStroke();
 		let y = random(70, 50);
 		let w = random(300, 400);
@@ -40,9 +46,9 @@ ellipse(250, 50, 60, 60);
 
 //Smaill Bulding
 for (let x = 0; x < width; x += random(50, 200)) {
-		let r = random(255);
-		let g = random(255);
-		let b = random(255);
+		let r = random(90);
+		let g = random(90);
+		let b = random(90);
 		fill(r, g, b); 
 		let y = random(70);
 		let w = random(5, 10);
@@ -52,8 +58,9 @@ for (let x = 0; x < width; x += random(50, 200)) {
 
 	}
 	// ground
-	fill(0, 128, 0);
+	fill("#094914");
 	rect(300, 385, width, height/2);
+
 //gress
 	for (let x = 0; x < width; x += random(2, 10)) {
 		fill('#9ACD32');
@@ -82,7 +89,13 @@ for (let x = 0; x < width; x += random(50, 200)) {
 		let treeHeight = random(treeWidth, treeWidth * 2);
 		ellipse(x, height - y - h/2, treeWidth, treeHeight);
 	}
-
+	for (let x = 0; x < width; x += random(2, 10)) {
+		fill('#aec6cf');
+		let y = random(10, 400);
+		let w = random(2, 1);
+		let h = random(8, 10);
+		rect(x, height - y, w, h);
+}
 	// clouds
 	var cloudNumber = random(3, 10);
 	for (let i = 0; i < cloudNumber; i++) {
@@ -90,7 +103,7 @@ for (let x = 0; x < width; x += random(50, 200)) {
 		let y = random(height/2);
 		let w = random(40, 80);
 		let h = random(20, 40);
-		fill('white');
+		fill('#d6d5c5');
 
 		var clusterNumber = random(2,4);
 		for (let j = 0; j < clusterNumber; j++) {
@@ -99,3 +112,4 @@ for (let x = 0; x < width; x += random(50, 200)) {
 		
 	}
 }
+
