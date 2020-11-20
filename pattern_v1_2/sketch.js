@@ -18,7 +18,7 @@ function pattern() {
 	background(' #9099a1');
 
 
-
+//Mountion
 for (let x = random(-200); x < width; x += random(100, 200)) {
 		// brown color
 		let r = random(50, 10);
