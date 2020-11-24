@@ -126,7 +126,7 @@ else if (currentSlide == 7) {
 		textSize(50);
 		text('Thank you! ', width/2.9, height/3, width- 100);
 		textSize(30);
-		text('Do you have question?', width/3, height/2 - 50);
+		text('Do you have any question?', width/3, height/2 - 50);
 
 
 }
