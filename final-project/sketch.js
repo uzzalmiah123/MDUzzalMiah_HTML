@@ -8,7 +8,7 @@ var y = 250;
 var x = 300;
 var s = 250
 // Sound
-//Alphabet.
+// Alphabet.
 	var aSound;
 	var bSound;
 	var cSound;
@@ -76,7 +76,8 @@ var s = 250
 	var downkeyImage;
 	var leftkeyImage;
 	var rightkeyImage;
-
+// Music
+	var musicSound;
 
 function preload() {
 // Sound
@@ -121,7 +122,7 @@ function preload() {
 	nineSound = loadSound('nine.wav'); // 9
 	zeroSound = loadSound('zero.wav'); // 0
 
-// COmmond word sound
+// Commond word sound
 	comaSound = loadSound('coma.wav'); // , KEY
 	altSound = loadSound('alt.wav'); // ALT
 	backqouteSound = loadSound('backqoute.wav'); // `` KEY 
@@ -153,6 +154,11 @@ function preload() {
 	leftkeyImage = loadImage('leftkey.png');
 	rightkeyImage = loadImage('rightkey.png');
 
+// music 
+
+	musicSound = loadSound('music.mp3'); // Music
+
+
 
 }
 
@@ -162,15 +168,11 @@ function setup() {
 	 r = random(300);
 	 g = random(300);
 	 b = random(300);
-
+	 musicSound.playMode('restart');
 
 	button = createButton("pause");
 	button.mousePressed(togglePlaying);
 }
-
-
-
-
 
 
 function mousePressed() {
@@ -385,6 +387,8 @@ textSize(150)
 	  if (destSound.isPlaying()){
 		    text("-",500, y,);
 	 }
+	 if (musicSound.isPlaying()){
+	 }
 	 
 }
 
@@ -589,12 +593,12 @@ function keyPressed(){
 	if (keyCode == 189){ // , -
 		destSound.play();
 	}
+	if (keyCode == 27){ // Esc
+		musicSound.play();
+	}
 
 }
 
 function togglePlaying(){
-	birdsSound.pause();
-	windySound.pause();
-	rainSound.pause();
-	pianoSound.pause();
+	musicSound.pause();
 }
